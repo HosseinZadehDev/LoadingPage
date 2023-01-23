@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #070707;
+}
+.cart{
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #656871;
+    border-radius: 10px;
+    padding: 30px;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.cart .img{
+    height: 70px;
+    width: 70px;
+    background: #656871;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.details{
+    margin-left: 20px;
+}
+.details span{
+    background: #656871;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.details .name{
+    width: 100px;
+    height: 15px;
+}
+.details .about{
+    width: 150px;
+    height: 15px;
+    margin-top: 10px;
+}
+.content{
+    margin: 25px 0;
+}
+.content .line{
+    background: #656871;
+    height: 13px;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.content .line-1{
+    width: calc(100% - 15%);
+}
+.content .line-3{
+    width: calc(100% - 35%);
+}
+.btns{
+    display: flex;
+}
+.btns .btn{
+    height: 35px;
+    width: 100%;
+    background: #656871;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.btns .btn-1{
+    margin-right: 8px;
+}
+.btns .btn-2{
+    margin-left: 8px;
+}
+.details span::before,
+.cart .img::before,
+.content .line::before,
+.btns .btn::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #656871 0%,
+     #888b94 20%, #656871 40%, #656871 100%);
+    background-size: 450px 400px;
+    background-repeat: no-repeat;
+    animation: load 1s linear infinite;
+}
+.details span::before,
+.btns .btn-2::before{
+    animation-delay: 0.2s;
+}
+@keyframes load{
+    0%{
+        background-position: -450px 0;
+    }
+    100%{
+        background-position: 450px 0;
+    }
+}
+.footer{
+    width: 100%;
+    background: #121215;
+    position: fixed;
+    border-top: 4px solid #ffcb0a;
+    height: 56px;
+    bottom: 0px;
+  }
+  .footer h3{
+    font-size: 1.3em;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 8px;
+  }
